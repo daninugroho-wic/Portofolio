@@ -398,7 +398,32 @@ hr {
   max-width: 1100px;
   margin: auto;
 }
+/*  */
 
+/* Make the home profile image square (1:1) and responsive */
+.home .profile-img {
+  width: 320px;      /* default visual size on desktop */
+  max-width: 100%;   /* shrink on small screens */
+  aspect-ratio: 1 / 1;/* force 1:1 ratio */
+  object-fit: cover;  /* crop to fill square while preserving center */
+  border-radius: 12px;
+  display: block;
+}
+
+/* Slightly smaller on narrow screens for better layout */
+@media (max-width: 780px) {
+  .home {
+    margin: 120px 20px;
+  }
+  .home .home-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .home .profile-img {
+    width: 60vw;
+  }
+}
+/*  */
 .service-card {
   background: #fff;
   padding: 25px;
