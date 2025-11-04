@@ -211,15 +211,12 @@ hr {
 }
 
 .about img{
-  /* make about image square and responsive; keep border and radius */
-  position: relative;
-  bottom: 0;
-  width: 320px;
-  max-width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 15px;
-  border: 1px solid black;
+    position: relative;
+    bottom: 85px;
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+    border: 1px solid black;
 }
 
 .about h2{
@@ -403,17 +400,17 @@ hr {
 }
 /*  */
 
-/* Make profile images square (1:1) and responsive for any section */
-.profile-img {
-  width: 320px;       /* default visual size on desktop */
-  max-width: 100%;    /* shrink on small screens */
-  aspect-ratio: 1 / 1; /* force 1:1 ratio */
-  object-fit: cover;   /* crop to fill square while preserving center */
+/* Make the home profile image square (1:1) and responsive */
+.home .profile-img {
+  width: 320px;      /* default visual size on desktop */
+  max-width: 100%;   /* shrink on small screens */
+  aspect-ratio: 1 / 1;/* force 1:1 ratio */
+  object-fit: cover;  /* crop to fill square while preserving center */
   border-radius: 12px;
   display: block;
 }
 
-/* Slightly smaller on narrow screens and stack layout for home */
+/* Slightly smaller on narrow screens for better layout */
 @media (max-width: 780px) {
   .home {
     margin: 120px 20px;
@@ -422,7 +419,7 @@ hr {
     flex-direction: column;
     gap: 1.5rem;
   }
-  .profile-img {
+  .home .profile-img {
     width: 60vw;
   }
 }
