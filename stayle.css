@@ -361,6 +361,36 @@ hr {
   margin: auto;
 }
 
+
+.sertif-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.sertif-card:hover {
+  transform: translateY(-6px);
+}
+
+.sertif-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.sertif-card h3 {
+  color: #1e40af;
+  margin-bottom: 8px;
+}
+
+.sertif-card p {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
 .project-card {
   background: #fff;
   padding: 20px;
@@ -828,7 +858,7 @@ body {
 
 /* Responsive for tablets and phones */
 @media (max-width: 1024px) {
-  .home, .about, .project, .services, .contact {
+  .home, .about, .project, .sertif, .services, .contact {
     margin: 120px 50px;
   }
 
@@ -855,7 +885,7 @@ body {
     display: none;
   }
 
-  .home, .about, .project, .services, .contact {
+  .home, .about, .project, .sertif, .services, .contact {
     margin: 100px 20px;
   }
 
@@ -898,7 +928,7 @@ body {
     display: none;
   }
 
-  .home, .about, .project, .services, .contact {
+  .home, .about, .project, .sertif, .services, .contact {
     margin: 20px auto;
     padding: 0 15px;
     text-align: center;
@@ -936,6 +966,7 @@ body {
 
   .home img,
   .project-card img,
+  .sertif-card img,
   .service-card img {
     width: 100%;
     max-width: 300px;
@@ -950,7 +981,7 @@ body {
   .info-p, .info-p2, .home-p, .about p, .project p, .service-card p, .contact p {
     font-size: 14px;
   }
-  .project-card h3, .service-card h3 { font-size: 16px; }
+  .sertif-card h3, .project-card h3, .service-card h3 { font-size: 16px; }
 
   .contact-content {
     justify-content: center;
