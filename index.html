@@ -279,12 +279,67 @@
       <h3>Sertifikat Tiga</h3>
       <p>Sertifikat diperoleh dari web Dicoding.</p>
     </div>
-    
+
     <div class="sertif-card">
-      <img src="images/ser5.jpg" alt="Portfolio Website">
+      <img src="images/ser5.jpg" alt="Portfolio Website" class="clickable-img">
       <h3>Sertifikat Tiga</h3>
       <p>Sertifikat diperoleh dari web Dicoding.</p>
     </div>
+
+    <!-- Modal for image preview -->
+    <div id="img-modal" class="img-modal" style="display:none;">
+      <span class="close-modal">&times;</span>
+      <img class="modal-content" id="modal-img">
+    </div>
+    <script>
+      // Image click to show modal
+      document.querySelectorAll('.clickable-img').forEach(img => {
+        img.addEventListener('click', function() {
+          document.getElementById('img-modal').style.display = 'block';
+          document.getElementById('modal-img').src = this.src;
+        });
+      });
+      // Close modal
+      document.querySelector('.close-modal').onclick = function() {
+        document.getElementById('img-modal').style.display = 'none';
+      };
+      // Close modal when clicking outside image
+      document.getElementById('img-modal').onclick = function(e) {
+        if (e.target === this) this.style.display = 'none';
+      };
+    </script>
+    <style>
+    .img-modal {
+      position: fixed;
+      z-index: 9999;
+      left: 0; top: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.8);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .img-modal .modal-content {
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 8px;
+      box-shadow: 0 0 20px #000;
+    }
+    .img-modal .close-modal {
+      position: absolute;
+      top: 30px; right: 40px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 10001;
+    }
+    .clickable-img {
+      cursor: pointer;
+      transition: box-shadow 0.2s;
+    }
+    .clickable-img:hover {
+      box-shadow: 0 0 10px #333;
+    }
+    </style>
   </div>
       </section>
 
