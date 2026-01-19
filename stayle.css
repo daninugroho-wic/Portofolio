@@ -392,12 +392,6 @@ hr {
 }
 
 .project-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.project-card {
   background: #fff;
   padding: 20px;
   border-radius: 16px;
