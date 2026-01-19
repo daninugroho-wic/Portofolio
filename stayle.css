@@ -399,6 +399,11 @@ hr {
   transition: 0.3s ease;
 }
 
+.skills,
+.btns {
+  margin-top: 0;
+}
+
 .project-card:hover {
   transform: translateY(-6px);
 }
