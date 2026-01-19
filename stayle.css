@@ -392,14 +392,37 @@ hr {
 }
 
 .project-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
 }
 
 .project-card .skills,
 .project-card .btns {
   margin-top: auto;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  color: #1e40af;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
 }
 
 .skills {
